@@ -1,0 +1,452 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  
+  
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.navLinks {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.navLinks {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: rgb(31, 235, 133);
+}
+
+a:hover {
+  color: rgb(69, 32, 206);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburgerNav {
+  display: none;
+}
+
+
+.hamburgerMenu {
+  position: relative;
+  display: inline-block;
+  background: #007BFF; /* Changed the background color of the hamburger icon */
+  border-radius: 2rem; /* Added a border radius for a rounded shape */
+  padding: 10px; /* Added padding for spacing */
+  cursor: pointer;
+}
+.hamburgerIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburgerIcon span {
+  width: 100%;
+  height: 4px; /* Increased the height of the lines for better visibility */
+  background-color: #333; /* Changed the line color to a darker gray */
+  transition: all 0.3s ease-in-out;
+}
+
+.menuLinks {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #9b222211;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menuLinks a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menuLinks li {
+  list-style: none;
+}
+
+.menuLinks.open {
+  max-height: 300px;
+}
+
+
+hamburgerIcon.open span:first-child {
+  transform: rotate(45deg) translate(4px, 5px); /* Adjusted rotation and translation for open icon */
+}
+
+
+.hamburgerIcon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerIcon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+.hamburgerIcon span:first-child {
+  transform: none;
+}
+
+.hamburgerIcon span:first-child {
+  opacity: 1;
+}
+
+.hamburgerIcon span:first-child {
+  transform: none;
+}
+
+section {
+  padding: 4rem 0; /* Adjusted padding for better spacing */
+  height: auto; /* Changed height to auto */
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh; /* Set a minimum height of 100vh for full viewport height */
+}
+
+.sectionContainer {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.sectionPicContainer {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.sectionText {
+  align-self: center;
+  text-align: center;
+}
+
+.sectionText p {
+  font-weight: 600;
+}
+
+.sectionTextP1 {
+  text-align: center;
+}
+
+.sectionTextP2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socialsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  background: #007BFF; /* Changed button background color */
+  color: #ffffff; /* Changed button text color to white */
+  border: none; /* Removed border */
+  cursor: pointer;
+}
+
+.btnColor1,
+.btnColor2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btnColor-1:hover,
+.btnColor-2:hover {
+  cursor: pointer;
+}
+
+.btnColor-1,
+.btnColor-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btnColor-1:hover {
+  background: rgb(0, 0, 0);
+}
+.btnColor-2 {
+  background: none;
+}
+.btnColor-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btnContainer {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.aboutContainers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.aboutDetailsContainer {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.aboutContainers,
+.aboutDetailsContainer {
+  display: flex;
+}
+
+.aboutPic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.detailsContainer {
+  padding: 1.5rem;
+  flex: 1;
+  background: #f5f5f5; /* Changed the background color to a light gray */
+  border-radius: 1rem; /* Slightly rounded corners */
+  border: 2px solid #333; /* Thickened border with a darker gray color */
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sectionContainer {
+  gap: 4rem;
+  height: 80%;
+}
+
+.sectionPicContainer {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experienceSubTitle {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experienceDetailsContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.articleContainer {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+  background: #f0f0f0; /* Updated the background color to a light gray */
+}
+
+.colorContainer {
+  border-color: #444; /* Changed the border color to a darker gray */
+  background: #ccc; /* Changed the background color to a lighter gray */
+  border-radius: 1rem; /* Added a slight border radius */
+  padding: 1rem; /* Added padding for spacing */
+}
+
+
+.projectImg {
+  border-radius: 1rem; /* Adjusted the border radius */
+  width: 100%; /* Set width to 100% to ensure responsiveness */
+  max-height: 100%; /* Set max-height to 100% to maintain aspect ratio */
+}
+
+
+.projectTitle {
+  margin: 1rem;
+  color: #000; /* Changed text color to black */
+}
+
+
+.projectBtn {
+  color: #000; /* Changed button text color to black */
+  background: #fff; /* Changed button background color to white */
+  border-color: #444; /* Changed border color of the button to a darker gray */
+  padding: 0.5rem 1rem; /* Adjusted padding for better appearance */
+  border-radius: 0.5rem; /* Added a slight border radius to the button */
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contactInfoUpperContainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(83, 253, 77);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contactInfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Changed from center to space between */
+  gap: 1rem; /* Increased the gap between elements */
+  margin: 0.5rem 0; /* Reduced the top and bottom margin */
+}
+
+.contactInfoContainer p {
+  font-size: larger;
+}
+
+.contactIcon {
+  cursor: default;
+}
+
+.emailIcon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+ 
